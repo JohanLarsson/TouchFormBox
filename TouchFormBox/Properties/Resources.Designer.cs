@@ -106,6 +106,15 @@ namespace TouchFormBox.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Value is.
+        /// </summary>
+        internal static string ValueIs {
+            get {
+                return ResourceManager.GetString("ValueIs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Weight.
         /// </summary>
         internal static string Weight {

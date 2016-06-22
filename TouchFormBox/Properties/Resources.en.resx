@@ -135,4 +135,7 @@
   <data name="Value" xml:space="preserve">
     <value>Value</value>
   </data>
+  <data name="ValueIs" xml:space="preserve">
+    <value>Value is</value>
+  </data>
 </root>
