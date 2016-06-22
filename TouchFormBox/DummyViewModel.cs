@@ -13,6 +13,7 @@
         private string lastName;
         private Length length;
         private Mass weight;
+        private double doubleValue;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -41,6 +42,17 @@
                 if (value == this.lastName) return;
                 this.lastName = value;
                 this.OnPropertyChanged();
+            }
+        }
+
+        public double DoubleValue
+        {
+            get { return doubleValue; }
+            set
+            {
+                if (value.Equals(doubleValue)) return;
+                doubleValue = value;
+                OnPropertyChanged();
             }
         }
 

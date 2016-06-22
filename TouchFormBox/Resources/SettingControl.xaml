@@ -1,9 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:propertyGrid="http://gu.se/PropertyGrid"
-                    xmlns:numeric="http://gu.se/NumericInput">
+                    xmlns:converters="clr-namespace:TouchFormBox.Converters"
+                    xmlns:numeric="http://gu.se/NumericInput"
+                    xmlns:propertyGrid="http://gu.se/PropertyGrid">
     <Thickness x:Key="SettingControlMargin">6,12</Thickness>
-
+    <converters:CultureToLengthUnitConverter x:Key="CultureToLengthUnitConverter" />
     <Style TargetType="{x:Type propertyGrid:InfoPresenter}">
         <Setter Property="TextElement.FontSize" Value="12" />
     </Style>
@@ -15,7 +16,7 @@
     </Style>
 
     <Style TargetType="{x:Type propertyGrid:LengthSettingControl}">
-        <Setter Property="Unit" Value="cm" />
+        <Setter Property="Unit" Value="{Binding Path=(numeric:NumericBox.Culture), RelativeSource={RelativeSource Self}, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource CultureToLengthUnitConverter}}" />
         <Setter Property="numeric:NumericBox.DecimalDigits" Value="1" />
     </Style>
 

@@ -1,6 +1,6 @@
-source C:\Tfs\Coromatic\Common\GuGet
 source http://www.nuget.org/api/v2/
 
 nuget Gu.Wpf.Localization
 nuget Gu.Wpf.PropertyGrid.UnitSettingControls
+nuget Gu.Wpf.PropertyGrid.NumericSettingControls
 nuget JetBrains.Annotations 

@@ -9,10 +9,13 @@
         xmlns:propertyGrid="http://gu.se/PropertyGrid"
         xmlns:select="http://gu.se/Select"
         xmlns:touch="http://gu.se/Touch"
+        xmlns:numeric="http://gu.se/NumericInput"
         Title="MainWindow"
         select:TextBox.MoveFocusOnEnter="True"
         select:TextBox.SelectAllOnGotKeyboardFocus="True"
         touch:TextBox.ShowTouchKeyboardOnTouchEnter="True"
+        numeric:NumericBox.Culture="{l:EffectiveCulture}"
+        Language="{l:EffectiveCulture}"
         mc:Ignorable="d">
     <Window.DataContext>
         <local:DummyViewModel />
@@ -29,6 +32,7 @@
 
             <propertyGrid:StringSettingControl Header="{l:Static p:Resources.FirstName}" Value="{Binding FirstName}" />
             <propertyGrid:StringSettingControl Header="{l:Static p:Resources.LastName}" Value="{Binding LastName}" />
+            <propertyGrid:DoubleSettingControl Header="{l:Static p:Resources.LastName}" Value="{Binding LastName}" />
             <propertyGrid:LengthSettingControl Header="{l:Static p:Resources.Length}" Value="{Binding Length}" />
             <propertyGrid:MassSettingControl Header="{l:Static p:Resources.Weight}" Value="{Binding Weight}" />
         </propertyGrid:SettingsControl>

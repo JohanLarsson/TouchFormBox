@@ -1,13 +1,17 @@
 NUGET
   remote: http://www.nuget.org/api/v2
-    Gu.Localization (3.1)
+    Gu.Localization (4.1)
     Gu.Units (0.9)
     Gu.Units.Wpf (0.9)
       Gu.Units (>= 0.9)
-    Gu.Wpf.Localization (3.1)
-      Gu.Localization (>= 3.1)
+    Gu.Wpf.Localization (4.1)
+      Gu.Localization (>= 4.1)
     Gu.Wpf.NumericInput (0.4.8)
     Gu.Wpf.PropertyGrid (2.3)
+      Gu.Wpf.ValidationScope
+    Gu.Wpf.PropertyGrid.NumericSettingControls (2.3)
+      Gu.Wpf.NumericInput
+      Gu.Wpf.PropertyGrid (>= 2.3)
       Gu.Wpf.ValidationScope
     Gu.Wpf.PropertyGrid.UnitSettingControls (2.3)
       Gu.Units.Wpf
@@ -18,5 +22,5 @@ NUGET
     JetBrains.Annotations (10.1.4)
       System.Runtime (>= 4.0) - framework: dnxcore50
     System.Private.Uri (4.0) - framework: dnxcore50
-    System.Runtime (4.0.20)
+    System.Runtime (4.0.20) - framework: dnxcore50
       System.Private.Uri (>= 4.0) - framework: dnxcore50
