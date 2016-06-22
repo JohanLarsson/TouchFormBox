@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:propertyGrid="http://gu.se/PropertyGrid"
+                    xmlns:numeric="http://gu.se/NumericInput">
+    <Thickness x:Key="SettingControlMargin">6,12</Thickness>
+
+    <Style TargetType="{x:Type propertyGrid:InfoPresenter}">
+        <Setter Property="TextElement.FontSize" Value="12" />
+    </Style>
+
+    <Style TargetType="{x:Type propertyGrid:SettingsControl}">
+        <Setter Property="Margin" Value="{StaticResource SettingControlMargin}" />
+        <Setter Property="TextElement.FontSize" Value="24" />
+        <Setter Property="ValueMinWidth" Value="150" />
+    </Style>
+
+    <Style TargetType="{x:Type propertyGrid:LengthSettingControl}">
+        <Setter Property="Unit" Value="cm" />
+        <Setter Property="numeric:NumericBox.DecimalDigits" Value="1" />
+    </Style>
+
+    <Style TargetType="{x:Type propertyGrid:MassSettingControl}">
+        <Setter Property="Margin" Value="{StaticResource SettingControlMargin}" />
+        <Setter Property="Unit" Value="kg" />
+        <Setter Property="numeric:NumericBox.DecimalDigits" Value="-1" />
+    </Style>
+</ResourceDictionary>

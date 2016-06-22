@@ -1,0 +1,36 @@
+﻿<Window x:Class="TouchFormBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:l="http://gu.se/Localization"
+        xmlns:local="clr-namespace:TouchFormBox"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:TouchFormBox.Properties"
+        xmlns:propertyGrid="http://gu.se/PropertyGrid"
+        xmlns:select="http://gu.se/Select"
+        xmlns:touch="http://gu.se/Touch"
+        Title="MainWindow"
+        select:TextBox.MoveFocusOnEnter="True"
+        select:TextBox.SelectAllOnGotKeyboardFocus="True"
+        touch:TextBox.ShowTouchKeyboardOnTouchEnter="True"
+        mc:Ignorable="d">
+    <Window.DataContext>
+        <local:DummyViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <l:LanguageSelector Grid.Column="0" AutogenerateLanguages="True" />
+
+        <propertyGrid:SettingsControl Grid.Column="1">
+            <TextBlock Style="{StaticResource SectionHeaderStyle}" Text="{l:Static p:Resources.PersonInfo}" />
+
+            <propertyGrid:StringSettingControl Header="{l:Static p:Resources.FirstName}" Value="{Binding FirstName}" />
+            <propertyGrid:StringSettingControl Header="{l:Static p:Resources.LastName}" Value="{Binding LastName}" />
+            <propertyGrid:LengthSettingControl Header="{l:Static p:Resources.Length}" Value="{Binding Length}" />
+            <propertyGrid:MassSettingControl Header="{l:Static p:Resources.Weight}" Value="{Binding Weight}" />
+        </propertyGrid:SettingsControl>
+    </Grid>
+</Window>
