@@ -1,16 +1,16 @@
-﻿using System;
-using System.Globalization;
-using System.Windows.Data;
-using Gu.Units;
-
-namespace TouchFormBox.Converters
+﻿namespace TouchFormBox.Converters
 {
+    using System;
+    using System.Globalization;
+    using System.Windows.Data;
+    using Gu.Units;
+
     public class CultureToLengthUnitConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var cultureInfo = (CultureInfo) value;
-            if (cultureInfo.TwoLetterISOLanguageName == "us")
+            if (cultureInfo.TwoLetterISOLanguageName == "en")
             {
                 return LengthUnit.Inches;
             }

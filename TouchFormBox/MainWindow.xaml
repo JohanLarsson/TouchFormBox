@@ -5,16 +5,16 @@
         xmlns:l="http://gu.se/Localization"
         xmlns:local="clr-namespace:TouchFormBox"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:numeric="http://gu.se/NumericInput"
         xmlns:p="clr-namespace:TouchFormBox.Properties"
         xmlns:propertyGrid="http://gu.se/PropertyGrid"
         xmlns:select="http://gu.se/Select"
         xmlns:touch="http://gu.se/Touch"
-        xmlns:numeric="http://gu.se/NumericInput"
         Title="MainWindow"
+        numeric:NumericBox.Culture="{l:EffectiveCulture}"
         select:TextBox.MoveFocusOnEnter="True"
         select:TextBox.SelectAllOnGotKeyboardFocus="True"
         touch:TextBox.ShowTouchKeyboardOnTouchEnter="True"
-        numeric:NumericBox.Culture="{l:EffectiveCulture}"
         Language="{l:EffectiveCulture}"
         mc:Ignorable="d">
     <Window.DataContext>
@@ -27,12 +27,12 @@
         </Grid.ColumnDefinitions>
         <l:LanguageSelector Grid.Column="0" AutogenerateLanguages="True" />
 
-        <propertyGrid:SettingsControl Grid.Column="1">
+        <propertyGrid:SettingsControl Grid.Column="1" numeric:NumericBox.ValidationTrigger="PropertyChanged">
             <TextBlock Style="{StaticResource SectionHeaderStyle}" Text="{l:Static p:Resources.PersonInfo}" />
 
             <propertyGrid:StringSettingControl Header="{l:Static p:Resources.FirstName}" Value="{Binding FirstName}" />
             <propertyGrid:StringSettingControl Header="{l:Static p:Resources.LastName}" Value="{Binding LastName}" />
-            <propertyGrid:DoubleSettingControl Header="{l:Static p:Resources.LastName}" Value="{Binding LastName}" />
+            <propertyGrid:DoubleSettingControl Header="{l:Static p:Resources.Value}" Value="{Binding DoubleValue}" />
             <propertyGrid:LengthSettingControl Header="{l:Static p:Resources.Length}" Value="{Binding Length}" />
             <propertyGrid:MassSettingControl Header="{l:Static p:Resources.Weight}" Value="{Binding Weight}" />
         </propertyGrid:SettingsControl>

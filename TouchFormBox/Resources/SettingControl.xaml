@@ -21,7 +21,6 @@
     </Style>
 
     <Style TargetType="{x:Type propertyGrid:MassSettingControl}">
-        <Setter Property="Margin" Value="{StaticResource SettingControlMargin}" />
         <Setter Property="Unit" Value="kg" />
         <Setter Property="numeric:NumericBox.DecimalDigits" Value="-1" />
     </Style>

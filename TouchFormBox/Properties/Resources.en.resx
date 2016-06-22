@@ -132,4 +132,7 @@
   <data name="Weight" xml:space="preserve">
     <value>Weight</value>
   </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
 </root>
