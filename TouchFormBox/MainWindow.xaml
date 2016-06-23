@@ -33,11 +33,12 @@
 
             <propertyGrid:StringSettingControl Header="{l:Static p:Resources.FirstName}" Value="{Binding FirstName}" />
             <propertyGrid:StringSettingControl Header="{l:Static p:Resources.LastName}" Value="{Binding LastName}" />
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{l:Static p:Resources.ValueIs}" />
-                <TextBlock Text=": " />
-                <TextBlock Text="{Binding DoubleValue}" />
-            </StackPanel>
+            <TextBlock>
+                <Run Text="{l:Static p:Resources.ValueIs}" ></Run>
+                <Run Text=":" ></Run>
+                <Run Text="{Binding DoubleValue}" ></Run>
+            </TextBlock>
+
             <propertyGrid:DoubleSettingControl Header="{l:Static p:Resources.Value}" Value="{Binding DoubleValue}" />
             <propertyGrid:LengthSettingControl Header="{l:Static p:Resources.Length}" Value="{Binding Length}" />
             <propertyGrid:MassSettingControl Header="{l:Static p:Resources.Weight}" Value="{Binding Weight}" />
